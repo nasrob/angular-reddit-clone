@@ -4,7 +4,7 @@
       <hr/>
       <div class="col-md-9">
         <!-- display posts -->
-        <div class="row post">
+        <div class="row post" *ngFor="let post of posts$">
           <!-- votes section -->
           <div class="col-md-1">
             <div class="d-flex flex-column votbox">
