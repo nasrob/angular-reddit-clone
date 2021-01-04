@@ -4,43 +4,7 @@
       <hr/>
       <div class="col-md-9">
         <!-- display posts -->
-        <div class="row post" *ngFor="let post of posts$">
-          <!-- votes section -->
-          <div class="col-md-1">
-            <div class="d-flex flex-column votbox">
-              <div class="p-2">
-                <!-- <fa-icon (click)></fa-icon> -->
-              </div>
-              <div class="p-2 votecount">post.voteCount</div>
-              <div class="p-2">
-                <!-- <fa-icon></fa-icon> -->
-              </div>
-            </div>
-          </div>
-          <!-- post info section -->
-          <div class="col-md-11">
-            <span class="subreddit-info">
-              <span class="subreddit-text"><a href="" class="post-url">post.subredditName</a></span>
-              <span> . Posted by <a href="" class="username">post.userName</a></span>
-              <span> . post.duration</span>
-            </span>
-            <hr/>
-            <div class="post-title">
-              <a href="" class="post-name">post.name</a>
-            </div>
-            <div>
-              <p class="post-text">post.description</p>
-            </div>
-            <hr>
-            <span>
-              <a role="button" class="btn-comments">
-                <!-- <fa-icon></fa-icon> -->
-                Comments
-              </a>
-              <!-- <button class="login" (click)="goToPost(post.id)">Read Post</button> -->
-            </span>
-          </div>
-        </div>
+
       </div>
       <div class="col-md-3">
       </div>

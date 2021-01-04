@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PostTitleComponent } from './post-title.component';
+import { PostTitleComponent } from './post-tile.component';
 
 describe('PostTitleComponent', () => {
   let component: PostTitleComponent;
