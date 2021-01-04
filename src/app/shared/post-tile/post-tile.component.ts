@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Post } from '../post.model';
 import { PostService } from '../post.service';
-import { faArrowUp, faArrowDown, faComments } from '@fortawesome/free-solid-svg-icons';
+import { faComments } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-post-tile',
@@ -10,8 +10,6 @@ import { faArrowUp, faArrowDown, faComments } from '@fortawesome/free-solid-svg-
 })
 export class PostTileComponent implements OnInit {
 
-  faArrowUp = faArrowUp;
-  faArroDown = faArrowDown;
   faComments = faComments;
 
   posts$: Array<Post> = [];
