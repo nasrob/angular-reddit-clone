@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Post } from '../post.model';
 
 @Component({
   selector: 'app-vote-button',
@@ -6,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./vote-button.component.css']
 })
 export class VoteButtonComponent implements OnInit {
+
+  @Input()
+  post: Post;
 
   constructor() { }
 

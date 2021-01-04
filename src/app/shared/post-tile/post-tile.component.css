@@ -1,0 +1,40 @@
+.post {
+  --post-line-color: #ccc;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #878A8C;
+  position: relative;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+.btn-comments {
+  border-radius: 2px solid;
+  color: #878A8C;
+  opacity: 1;
+}
+
+.btn-comments:hover {
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.post-title {
+  font-size: 28px;
+  font-weight: bold;
+  opacity: 1;
+}
+
+.post-url, post-name {
+  color: black;
+}
+
+.subreddit-text {
+  font-weight: bold;
+}
+
+.post-texte {
+  margin-top: 10px;
+}

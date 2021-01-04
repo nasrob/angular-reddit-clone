@@ -1,1 +1,13 @@
-<p>vote-button works!</p>
+<div class="col-md-1">
+  <div class="d-flex flex-column vot-box">
+    <div class="p-2">
+      <fa-icon (click)="upvotePost()" class="up-vote" [icon]="faArrowUp"
+                [style.color]="post.upVote ? 'green' : ''"></fa-icon>
+    </div>
+    <div class="p-2 vote-count">{{ post.voteCount }}</div>
+    <div class="p-2">
+      <fa-icon (click)="downvotePost()" class="down-vote" [icon]="faArrowDown"
+                [style.color]="post.downVote ? 'red' : ''"></fa-icon>
+    </div>
+  </div>
+</div>
