@@ -15,4 +15,8 @@ export class SubredditService {
   getAllSubreddits(): Observable<SubredditModel[]> {
     return this.http.get<SubredditModel[]>(this.apiUrl);
   }
+
+  createSubreddit(subbredditModel: SubredditModel): Observable<SubredditModel> {
+    return this.http.post<SubredditModel>(this.apiUrl, subbredditModel);
+  }
 }
