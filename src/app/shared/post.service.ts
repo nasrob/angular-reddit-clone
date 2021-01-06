@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { CreatePostPayload } from '../post/create-post/create-post.payload';
 import { Post } from './post.model';
 
 @Injectable({
@@ -14,5 +15,9 @@ export class PostService {
 
   getAllPosts(): Observable<Post[]> {
     return this.http.get<Post[]>(this.apiUrl + '/posts/');
+  }
+
+  createPost(postPayload: CreatePostPayload): Observable<any> {
+    return this.http.post(`${this.apiUrl}/`, postPayload);
   }
 }
