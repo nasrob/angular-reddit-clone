@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { throwError } from 'rxjs';
+import { SubredditModel } from '../subreddit-response';
+import { SubredditService } from '../subreddit.service';
 
 @Component({
   selector: 'app-list-subreddit',
@@ -7,9 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListSubredditComponent implements OnInit {
 
-  constructor() { }
+  subreddits: SubredditModel[];
+
+  constructor(private subredditService: SubredditService) { }
 
   ngOnInit(): void {
+    this.subredditService.getAllSubreddits().subscribe(data => {
+      this.subreddits = data;
+    }, error => throwError(error));
   }
-
 }
