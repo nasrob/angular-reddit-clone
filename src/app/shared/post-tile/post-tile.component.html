@@ -18,10 +18,10 @@
     <hr>
     <span>
       <a role="button" class="btn-comments">
-        <!-- <fa-icon></fa-icon> -->
-        Comments
+        <fa-icon [icon]="faComments"></fa-icon>
+        Comments({{ post.commentCount }})
       </a>
-      <!-- <button class="login" (click)="goToPost(post.id)">Read Post</button> -->
+      <button class="login" (click)="goToPost(post.id)">Read Post</button>
     </span>
   </div>
 </div>
