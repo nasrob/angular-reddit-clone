@@ -20,4 +20,8 @@ export class PostService {
   createPost(postPayload: CreatePostPayload): Observable<any> {
     return this.http.post(`${this.apiUrl}/`, postPayload);
   }
+
+  getPost(postId: number): Observable<Post> {
+    return this.http.get<Post>(`${this.apiUrl}/posts/${postId}`);
+  }
 }
