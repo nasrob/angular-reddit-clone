@@ -8,7 +8,7 @@ import { CommentPayload } from './comment.payload';
 })
 export class CommentService {
 
-  apiUrl: 'http://localhost:8080/api';
+  private apiUrl: string = 'http://localhost:8080/api';
 
   constructor(private httplClient: HttpClient) { }
 
