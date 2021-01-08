@@ -30,13 +30,16 @@ export class AuthService {
   }
 
   login(loginRequestPayload: LoginRequestPayload): Observable<boolean> {
-    return this.httpClient.post<LoginResponse>(this.apiUrl + '/login', loginRequestPayload).pipe(
+    return this.httpClient.post<LoginResponse>(this.apiUrl + '/login', loginRequestPayload)
+    .pipe(
       map((data: LoginResponse) => {
         this.localStorage.store('authenticationToken', data.authenticationToken);
         this.localStorage.store('username', data.username);
         this.localStorage.store('refreshToken', data.refreshToken);
         this.localStorage.store('expiresAt', data.expiresAt);
 
+        this.loggedIn.emit(true);
+        this.username.emit(data.username);
         return true;
       })
     );
@@ -47,7 +50,8 @@ export class AuthService {
   }
 
   refreshToken() {
-    return this.httpClient.post<LoginResponse>(this.apiUrl + '/refresh/token', this.refreshTokenPayload)
+    return this.httpClient.post<LoginResponse>(this.apiUrl + '/refresh/token',
+            this.refreshTokenPayload)
             .pipe(tap(response => {
               this.localStorage.clear('authenticationToken');
               this.localStorage.clear('expiresAt');

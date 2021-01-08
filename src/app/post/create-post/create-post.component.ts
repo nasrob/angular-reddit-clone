@@ -53,4 +53,7 @@ export class CreatePostComponent implements OnInit {
     }, error => throwError(error));
   }
 
+  discardPost() {
+    console.log('Discard');
+  }
 }
