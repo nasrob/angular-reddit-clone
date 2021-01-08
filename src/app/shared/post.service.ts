@@ -18,6 +18,7 @@ export class PostService {
   }
 
   createPost(postPayload: CreatePostPayload): Observable<any> {
+    console.log(`${this.apiUrl}/posts`)
     return this.http.post(`${this.apiUrl}/`, postPayload);
   }
 
